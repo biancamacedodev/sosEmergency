@@ -12,7 +12,7 @@ export function ButtonPress() {
     <ScrollView>
       <View>
       <TouchableOpacity onPress={() => {navigation.navigate('Form')}}>
-              <Text  style={styles.button}>Activate!</Text>    
+              <Text style={styles.button}>Activate!</Text>    
       </TouchableOpacity>
           
       </View>

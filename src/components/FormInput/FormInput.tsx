@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { Alert, Button, Image, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { Alert, Button, ScrollView, Text, TextInput, View } from 'react-native';
 
 import { styles } from './FormInputStyle';
-import { ButtonPress } from '../ButtonPress/ButtonPress';
-import LogoImage from '../LogoImage/logoIcon'
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 export function Form() {
     const [nome, setNome] = useState('');
@@ -38,15 +35,16 @@ export function Form() {
         <Text style={styles.text}>Localizaçao:</Text>
         <TextInput
           style={styles.input}
-          value={telefone}
-          onChangeText={(text) => setLocalizacao(localizacao)}
+          value={localizacao}
+          onChangeText={(text) => setLocalizacao(text)}
           placeholder="Digite sua localizaçao"
+
         />
         <Text style={styles.text}>Denúncia:</Text>
         <TextInput
           style={styles.input}
-          value={telefone}
-          onChangeText={(text) => setObservacao(observacao)}
+          value={observacao}
+          onChangeText={(text) => setObservacao(text)}
           placeholder="Digite sua denuncia"
         />
         <Button title="Enviar" onPress={handleSubmit} />
