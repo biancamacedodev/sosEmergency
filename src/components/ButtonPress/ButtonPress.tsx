@@ -1,14 +1,22 @@
-import React from 'react';
-import { Pressable, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 import { styles } from './ButtonPressStyles';
 
+import { useNavigation } from '@react-navigation/native';
+
 export function ButtonPress() {
+  const navigation = useNavigation();
+
   return (
-    <View>
-        <Pressable style={styles.button} onPress={() => console.log('clicado button press')}>
-            <Text  style={styles.text}>Activate!</Text>    
-        </Pressable>
-    </View>
+    <ScrollView>
+      <View>
+      <TouchableOpacity onPress={() => {navigation.navigate('Form')}}>
+              <Text  style={styles.button}>Activate!</Text>    
+      </TouchableOpacity>
+          
+      </View>
+    </ScrollView>
+  
   );
 }

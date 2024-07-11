@@ -1,16 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Home from './src/screens/Home/Home';
+import Routes from './src/routes/routes';
 
-export default function App() {
+const  App = () => {
   return (
-    <View style={styles.container}>
-      
-      <Home />
-      
-      <StatusBar style="auto" />
-    </View>
-  );
+    <Routes />
+
+  )
 }
 
 const styles = StyleSheet.create({
@@ -21,3 +17,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+export default App
